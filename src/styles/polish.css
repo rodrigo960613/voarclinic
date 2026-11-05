@@ -18,7 +18,14 @@ body {
 .btn {
   font-weight: 400;
   letter-spacing: 0.015em;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
+  transition: background-color 0.8s cubic-bezier(0.45, 0, 0.55, 1), color 0.8s cubic-bezier(0.45, 0, 0.55, 1), border-color 0.8s cubic-bezier(0.45, 0, 0.55, 1), transform 0.2s;
+}
+/* Mantém a mesma suavidade para quem tem "reduzir animações" ligado no sistema */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition-duration: 0.8s, 0.8s, 0.8s, 0.2s !important;
+  }
+
 }
 .btn--primary {
   background: var(--ink);
