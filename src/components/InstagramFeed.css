@@ -1,0 +1,122 @@
+.insta {
+  background: var(--peach);
+  color: var(--ink);
+}
+.insta__grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(36px, 7vw, 110px);
+  align-items: center;
+}
+.insta__video {
+  width: min(100%, 300px);
+  padding: 10px;
+  border-radius: 40px;
+  background: var(--ink);
+  box-shadow: 0 40px 70px -36px rgba(14, 33, 69, 0.75);
+}
+.insta__video video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 336 / 552;
+  border-radius: 30px;
+  background: #000;
+  object-fit: cover;
+}
+.insta__copy h2 {
+  max-width: 13ch;
+}
+.insta__lead {
+  max-width: 30rem;
+  margin: 24px 0 40px;
+  font-size: 1.12rem;
+  font-weight: 300;
+}
+.insta__handle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--ink);
+  font-size: clamp(0.95rem, 2.1vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.insta__handle svg {
+  flex: none;
+}
+.insta__handle:hover span {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.insta__text {
+  margin: 10px 0 28px;
+  font-weight: 300;
+}
+.insta :focus-visible {
+  outline-color: var(--ink);
+}
+
+.insta__posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-top: clamp(48px, 7vw, 88px);
+}
+.post {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: #fff;
+  color: var(--text);
+  text-decoration: none;
+  transition: transform 0.3s var(--ease);
+}
+.post:hover {
+  transform: translateY(-4px);
+}
+.post img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.post__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px 20px 22px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 300;
+}
+.post__body strong {
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+.post__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  color: var(--morpho);
+  font-weight: 500;
+}
+
+@media (max-width: 859px) {
+  .insta__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .insta__video {
+    width: min(78%, 280px);
+    margin-inline: auto;
+  }
+}
+@media (max-width: 480px) {
+  .insta__copy .btn {
+    width: 100%;
+  }
+}

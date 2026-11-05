@@ -1,0 +1,213 @@
+.wa {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none; /* só os filhos recebem toque */
+}
+.wa > * {
+  pointer-events: auto;
+}
+
+/* Botão: círculo verde oficial do WhatsApp (#25D366) com o ícone branco */
+.wa__btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 28px -8px rgba(18, 140, 70, 0.6), 0 0 0 5px rgba(255, 255, 255, 0.9), inset 0 -3px 6px rgba(0, 0, 0, 0.08);
+  animation: wa-pop 0.7s var(--ease) 0.6s both;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s, background-color 0.2s;
+}
+.wa__btn:hover {
+  background: #20c25c;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 16px 30px -8px rgba(18, 140, 70, 0.65);
+}
+.wa__btn:active {
+  transform: scale(0.95);
+}
+.wa__btn:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+.wa__btn svg {
+  display: block;
+  width: 38px;
+  height: 38px;
+}
+
+/* Pulso (3 vezes) feito com sombra, pois o botão corta o que passa das bordas */
+.wa__btn {
+  animation: wa-pop 0.7s var(--ease) 0.6s both, wa-pulse 2.4s ease-out 2.4s 3;
+}
+@keyframes wa-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 12px 28px -8px rgba(18, 140, 70, 0.6), 0 0 0 5px rgba(255, 255, 255, 0.9), 0 0 0 5px rgba(37, 211, 102, 0.55);
+  }
+  100% {
+    box-shadow: 0 12px 28px -8px rgba(18, 140, 70, 0.6), 0 0 0 5px rgba(255, 255, 255, 0.9), 0 0 0 24px rgba(37, 211, 102, 0);
+  }
+}
+/* Anel antigo (desativado) */
+
+/* Convite */
+.wa__teaser {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: min(300px, calc(100vw - 32px));
+  padding: 16px 14px 16px 18px;
+  border-radius: 22px 22px 6px 22px;
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 24px 50px -20px rgba(14, 33, 69, 0.5);
+  animation: wa-in 0.5s var(--ease) both;
+}
+.wa__teaser p {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.4;
+}
+.wa__teaser strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.wa__x {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: -8px -4px 0 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.wa__x:hover {
+  background: var(--mist);
+  color: var(--ink);
+}
+.wa__x:focus-visible {
+  outline: 3px solid var(--morpho);
+}
+@keyframes wa-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .wa__btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wa__btn {
+    animation: none;
+    opacity: 1;
+    transition: none;
+  }
+  .wa__teaser {
+    animation: none;
+  }
+}
+
+/* Dica "Fale conosco" ao lado do botão (só com mouse) */
+.wa__tip {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(8px, -50%);
+  pointer-events: none;
+  transition: opacity 0.25s, transform 0.25s var(--ease);
+}
+@media (hover: hover) {
+  .wa__btn:hover .wa__tip,
+.wa__btn:focus-visible .wa__tip {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+@media (hover: none) {
+  .wa__tip {
+    display: none;
+  }
+}
+
+/* Voltar ao início */
+.wa__top {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 12px 24px -10px rgba(11, 26, 56, 0.6);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px) scale(0.9);
+  transition: opacity 0.3s, transform 0.35s var(--ease), visibility 0s linear 0.35s, background-color 0.2s;
+}
+.wa__top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition-delay: 0s;
+}
+.wa__top:hover {
+  background: var(--morpho);
+}
+.wa__top:focus-visible {
+  outline: 3px solid var(--morpho-bright);
+  outline-offset: 3px;
+}
+.wa__top svg {
+  transition: transform 0.3s var(--ease);
+}
+.wa__top:hover svg {
+  transform: translateY(-2px);
+}
