@@ -39,7 +39,6 @@ html {
 }
 body {
   margin: 0;
-  background: var(--white);
   color: var(--text);
   font-family: var(--font);
   font-size: 1rem;
@@ -163,7 +162,6 @@ a {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.25s var(--ease), background-color 0.2s, color 0.2s, border-color 0.2s;
   -webkit-tap-highlight-color: transparent;
 }
 .btn--lg {
@@ -179,14 +177,9 @@ a {
   cursor: progress;
 }
 .btn--primary {
-  background: var(--morpho);
   color: #fff;
 }
-.btn--primary:hover {
-  background: var(--ink);
-}
 .btn--secondary {
-  border-color: var(--ink);
   color: var(--ink);
   background: transparent;
 }
