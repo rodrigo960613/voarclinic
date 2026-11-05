@@ -1,8 +1,6 @@
 .footer {
-  padding-top: clamp(32px, 4.5vw, 52px);
   background: var(--ink);
   color: var(--on-ink);
-  font-size: 0.95rem;
   font-weight: 300;
 }
 .footer a {
@@ -19,21 +17,13 @@
 .footer__grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 28px;
-  padding-bottom: 28px;
-}
-.footer__brand p {
-  max-width: 24rem;
-  margin: 18px 0 18px;
 }
 .footer__legal {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px 24px;
-  padding-block: 18px 84px; /* espaço para o botão flutuante do WhatsApp */
   border-top: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: 0.85rem;
 }
 .footer__legal p {
   margin: 0;
