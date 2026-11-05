@@ -6,7 +6,7 @@ export function Help() {
   return <section id="especialidades" className="section help" aria-labelledby="ajuda-titulo">
       <div className="container">
         <header className="v2head">
-          <h2 id="ajuda-titulo">Como posso te ajudar</h2>
+          <h2 id="ajuda-titulo">Serviços</h2>
           <p className="lead">{servicesIntro.lead}</p>
         </header>
         <ul className="cards">
@@ -16,7 +16,7 @@ export function Help() {
               <h3>{s.title}</h3>
               <p>{s.description}</p>
               <a
-    href={whatsappLink(`Olá! Gostaria de saber mais sobre a avaliação para: ${s.title}.`)}
+    href={whatsappLink(`Olá! Gostaria de saber mais sobre o serviço: ${s.title}.`)}
     target="_blank"
     rel="noopener noreferrer"
   >

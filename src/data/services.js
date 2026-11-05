@@ -1,35 +1,41 @@
 export const servicesIntro = {
-  lead: "Compreendendo o funcionamento cognitivo de forma integral. Estas são as áreas atendidas pela clínica:"
+  lead: "Estes são os serviços oferecidos pela Voar Clinic:"
 };
 export const services = [
   {
-    id: "desenvolvimento-intelectual",
-    title: "Transtornos do Desenvolvimento Intelectual",
-    description: "Investigação das habilidades cognitivas e da autonomia no cotidiano, para orientar apoios adequados a cada pessoa.",
-    icon: "bulb"
+    id: "avaliacao-neuropsicologica",
+    title: "Avaliação Neuropsicológica",
+    description: "Realizo avaliações detalhadas para entender as funções cognitivas e identificar possíveis dificuldades em crianças e adultos.",
+    icon: "brain"
   },
   {
-    id: "aprendizado",
-    title: "Transtornos do Desenvolvimento do Aprendizado",
-    description: "Avaliação de dificuldades na leitura, na escrita e na matemática, entendendo como cada criança ou adulto aprende.",
-    icon: "book"
+    id: "diagnostico-de-transtornos",
+    title: "Diagnóstico de Transtornos",
+    description: "Auxílio no diagnóstico de condições como TEA, TDAH, transtornos de aprendizagem e altas habilidades, proporcionando clareza e direcionamento para o tratamento adequado.",
+    icon: "clipboard"
   },
   {
-    id: "tea",
-    title: "Transtorno do Espectro Autista",
-    description: "Avaliação da comunicação, da interação social e dos comportamentos, com um olhar individualizado e respeitoso.",
-    icon: "users"
-  },
-  {
-    id: "tdah",
-    title: "Transtorno do Déficit de Atenção e Hiperatividade",
-    description: "Análise da atenção, da impulsividade e da organização, para esclarecer dúvidas e direcionar o cuidado.",
+    id: "intervencoes-terapeuticas",
+    title: "Intervenções Terapêuticas",
+    description: "Ofereço intervenções personalizadas para tratar dificuldades cognitivas, comportamentais e emocionais, promovendo a melhoria da qualidade de vida.",
     icon: "focus"
   },
   {
-    id: "neurodegenerativo",
-    title: "Transtorno Neurológico Degenerativo",
-    description: "Avaliação da memória e de outras funções cognitivas em quadros como Alzheimer, Parkinson e outros, apoiando também as famílias.",
-    icon: "brain"
+    id: "suporte-educacional",
+    title: "Suporte Educacional",
+    description: "Trabalho com escolas e famílias para desenvolver estratégias educacionais que atendam às necessidades individuais dos alunos com dificuldades de aprendizagem.",
+    icon: "book"
+  },
+  {
+    id: "consultoria-e-aconselhamento",
+    title: "Consultoria e Aconselhamento",
+    description: "Proporciono consultoria para pais e educadores, ajudando a entender e manejar melhor os desafios cognitivos e comportamentais.",
+    icon: "users"
+  },
+  {
+    id: "psicoterapia",
+    title: "Psicoterapia",
+    description: "Ofereço psicoterapia, ajudando você a entender e manejar melhor suas questões emocionais, cognitivas e comportamentais.",
+    icon: "bulb"
   }
 ];

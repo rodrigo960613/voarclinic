@@ -48,10 +48,13 @@
 .card {padding:28px 26px 24px;gap:10px}
 .card > svg:first-of-type {margin-bottom:4px}
 .card p {flex:1}
-.help .cards {grid-template-columns:repeat(6,minmax(0,1fr))}
-.help .card {grid-column:span 2}
-.help .card:nth-child(4) {grid-column:2 / span 2}
-.help .card:nth-child(5) {grid-column:4 / span 2}
+.help .cards {grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1000px) {
+  .help .cards {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px) {
+  .help .cards {grid-template-columns:minmax(0,1fr)}
+}
 @media (max-width:1000px) {
   .help .cards {grid-template-columns:repeat(2,minmax(0,1fr))}
   .help .card,.help .card:nth-child(4),.help .card:nth-child(5) {grid-column:auto}
