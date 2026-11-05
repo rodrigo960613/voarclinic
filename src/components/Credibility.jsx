@@ -2,7 +2,7 @@ import { Picture } from "./Picture";
 import { clinic } from "../data/clinic";
 import "./V2.css";
 export function Credibility() {
-  return <section className="cred" aria-labelledby="cred-titulo">
+  return <section id="especialista" className="cred" aria-labelledby="cred-titulo">
       <div className="container cred__grid">
         <div className="cred__photo">
           <Picture

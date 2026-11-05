@@ -6,6 +6,7 @@ import { useScrolled } from "../hooks";
 import { whatsappLink } from "../data/clinic";
 import "./Header.css";
 const links = [
+  { id: "especialista", label: "Especialista" },
   { id: "sobre", label: "Sobre" },
   { id: "especialidades", label: "Atendimento" },
   { id: "como-funciona", label: "Como funciona" },
