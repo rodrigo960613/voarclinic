@@ -25,7 +25,6 @@
   color: #fff;
   text-decoration: none;
   box-shadow: 0 12px 28px -8px rgba(18, 140, 70, 0.6), 0 0 0 5px rgba(255, 255, 255, 0.9), inset 0 -3px 6px rgba(0, 0, 0, 0.08);
-  animation: wa-pop 0.7s var(--ease) 0.6s both;
   transition: transform 0.3s var(--ease), box-shadow 0.3s, background-color 0.2s;
 }
 .wa__btn:hover {
