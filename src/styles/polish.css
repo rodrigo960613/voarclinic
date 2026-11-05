@@ -33,11 +33,6 @@ body {
   background: var(--peach);
 }
 
-/* Sobre */
-#sobre {
-  background: var(--pearl);
-}
-
 /* Etapas */
 .how {
   background: #fff;
@@ -71,15 +66,7 @@ body {
   }
 }
 
-/* Compromisso */
-
 /* FAQ e contato */
-.faq {
-  background: var(--pearl);
-}
-.contact {
-  background: var(--mist);
-}
 .contact__form {
   border: 1px solid var(--line);
   box-shadow: none;
@@ -90,9 +77,6 @@ body {
 }
 
 /* CTA final: faixa em azul-marinho */
-.cta {
-  background: var(--mist);
-}
 .cta__box {
   background: var(--ink);
   box-shadow: none;
@@ -103,11 +87,6 @@ body {
 }
 .cta p {
   color: var(--on-ink);
-}
-
-.hero__grid {
-  position: relative;
-  z-index: 1;
 }
 
 .contact__list a {
@@ -123,14 +102,19 @@ body {
 .hero__subtitle {margin-top: 16px}
 .hero__actions {margin-top: 22px}
 .hero__art {width: min(100%, 400px)}
-.cta {padding-top: 20px; padding-bottom: clamp(12px, 2vw, 20px)}
-.cta__box {padding: clamp(28px, 4vw, 44px) clamp(22px, 5vw, 56px) } 
+.cta {padding-block: clamp(16px, 3vw, 28px)}
+.cta__box {padding: clamp(28px, 4vw, 44px) clamp(22px, 5vw, 56px)}
 .cta h2 {max-width: 24ch; font-size: clamp(1.5rem, 3vw, 2.2rem)}
 .cta p {margin-top: 10px; margin-bottom: 18px}
 .footer {padding-top: 16px; font-size: 0.88rem}
 .footer__grid {gap: 8px; padding-bottom: 10px}
 .footer__brand p {margin: 6px 0 0; max-width: 38rem}
 .footer__legal {padding-block: 10px 20px; padding-right: 88px; font-size: 0.78rem}
+
+/* Chamada final centralizada */
+.cta__box {text-align: center}
+.cta h2, .cta p {margin-inline: auto}
+.cta p {max-width: 40rem}
 
 /* Menu com 7 itens */
 .header__bar .btn {white-space: nowrap}
