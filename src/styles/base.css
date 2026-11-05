@@ -1,0 +1,343 @@
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/poppins-300.woff') format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/poppins-400.woff') format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/poppins-500.woff') format('woff');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../assets/fonts/poppins-700.woff') format('woff');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 8px);
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+h1 {
+  font-size: clamp(2.4rem, 5.6vw, 4.6rem);
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+h2 {
+  font-size: clamp(2rem, 4.2vw, 3.4rem);
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+p {
+  margin: 0 0 1em;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: var(--morpho);
+  text-underline-offset: 4px;
+}
+:focus-visible {
+  outline: 3px solid var(--morpho-bright);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.container {
+  width: min(100% - 2 * var(--gutter), var(--container));
+  margin-inline: auto;
+}
+.section {
+  padding-block: var(--section-y);
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: -80px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+.section-heading {
+  max-width: 40rem;
+  margin-bottom: clamp(24px, 3.5vw, 40px);
+}
+.section-heading .lead {
+  margin: 20px 0 0;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  font-weight: 300;
+}
+.section-heading--light h2 {
+  color: #fff;
+}
+.section-heading--light .lead {
+  color: var(--on-ink);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border: 1.5px solid transparent;
+  border-radius: 999px;
+  font: 500 0.98rem/1.2 var(--font);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), background-color 0.2s, color 0.2s, border-color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn--lg {
+  min-height: 58px;
+  padding: 0 34px;
+  font-size: 1.02rem;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+.btn--primary {
+  background: var(--morpho);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--ink);
+}
+.btn--secondary {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: transparent;
+}
+.btn--secondary:hover {
+  background: var(--ink);
+  color: #fff;
+}
+.btn--dark {
+  background: var(--ink);
+  color: #fff;
+}
+.btn--dark:hover {
+  background: var(--morpho);
+}
+.btn--light {
+  background: #fff;
+  color: var(--ink);
+}
+.btn--light:hover {
+  background: var(--peach);
+}
+.btn svg {
+  flex: none;
+}
+.link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--morpho);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.link-btn--light {
+  color: var(--on-ink);
+}
+
+/* Logotipo (provisório: troque pelo arquivo oficial quando disponível) */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--morpho);
+}
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo__name {
+  font-size: 1.28rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.logo__tag {
+  margin-top: 4px;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+}
+.logo__badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--morpho); /* mesmo emblema, mesma cor, no cabeçalho e no rodapé */
+  box-shadow: 0 0 0 1px rgba(29, 78, 158, 0.16);
+}
+.logo--light .logo__name {
+  color: #fff;
+}
+.logo--light .logo__tag {
+  color: var(--on-ink);
+}
+
+/* Diálogo de privacidade */
+.dialog {
+  width: min(92vw, 640px);
+  max-height: 86vh;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-md);
+  background: #fff;
+  color: var(--text);
+  box-shadow: 0 30px 80px -20px rgba(14, 33, 69, 0.55);
+}
+.dialog::backdrop {
+  background: rgba(14, 33, 69, 0.6);
+  backdrop-filter: blur(3px);
+}
+.dialog__box header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.dialog__box h2 {
+  font-size: 1.5rem;
+}
+.dialog__close {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--mist);
+  color: var(--ink);
+  cursor: pointer;
+}
+.dialog__body {
+  padding: 8px 24px 28px;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+.dialog__body h3 {
+  margin: 22px 0 6px;
+  font-size: 1rem;
+}
+.dialog__meta {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding-inline: 22px;
+  }
+  .btn--lg {
+    padding-inline: 26px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+}
