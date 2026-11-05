@@ -11,7 +11,7 @@
   gap: 16px;
   height: var(--header-h);
 }
-/* Fundo e desfoque ficam no pseudo-elemento: assim o menu móvel (position: fixed) não fica preso à barra. */
+/* Fundo no pseudo-elemento: assim o menu móvel (position: fixed) não fica preso à barra. */
 .header__bar::before {
   content: '';
   position: absolute;
@@ -22,7 +22,6 @@
   transition: border-color 0.35s;
 }
 .header--scrolled .header__bar::before {
-  background: var(--pearl);
   border-color: var(--line);
 }
 .header__logo {
@@ -46,7 +45,7 @@
   font-weight: 400;
   letter-spacing: 0.01em;
   text-decoration: none;
-  transition: color 0.45s var(--ease);
+  transition: color 0.8s cubic-bezier(0.45, 0, 0.55, 1);
 }
 .header__nav a:not(.btn):hover {
   color: var(--morpho);
@@ -59,12 +58,23 @@
   bottom: 8px;
   height: 1px;
   background: var(--ink);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.45s var(--ease);
+  opacity: 0;
+  transform: scaleX(0.35);
+  transform-origin: center;
+  transition: transform 0.6s cubic-bezier(0.45, 0, 0.55, 1), opacity 0.7s cubic-bezier(0.45, 0, 0.55, 1);
 }
 .header__nav a:not(.btn):hover::after {
+  opacity: 1;
   transform: scaleX(1);
+}
+/* O base.css zera as transições de quem tem "reduzir animações" ligado no sistema; o hover do menu é discreto e continua suave. */
+@media (prefers-reduced-motion: reduce) {
+  .header__nav a:not(.btn) {
+    transition-duration: 0.8s !important;
+  }
+  .header__nav a:not(.btn)::after {
+    transition-duration: 0.6s, 0.7s !important;
+  }
 }
 .header .header__cta--mobile {
   display: none;
@@ -92,7 +102,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1099px) {
   .header__bar {
     display: flex;
     justify-content: space-between;
@@ -131,10 +141,7 @@
   .header__nav a:not(.btn) {
     width: 100%;
     min-height: 64px;
-    padding: 0;
-    border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-    background: none !important;
     color: #fff;
     font-size: clamp(1.7rem, 7vw, 2.4rem);
     font-weight: 300;
@@ -148,12 +155,11 @@
   .header--open .header__bar::before {
     background: transparent;
     border-color: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
   }
-  .header--open .logo {
-    color: var(--peach);
+  .header .logo__name,
+  .header .logo__tag,
+  .header .header__toggle {
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
   .header--open .logo__name {
     color: #fff;
@@ -163,7 +169,6 @@
   }
   .header--open .header__toggle {
     border-color: rgba(255, 255, 255, 0.3);
-    background: transparent;
     color: #fff;
   }
 }

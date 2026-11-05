@@ -47,8 +47,7 @@
   flex: none;
 }
 .insta__handle:hover span {
-  text-decoration: underline;
-  text-underline-offset: 6px;
+  text-decoration: none;
 }
 .insta__text {
   margin: 10px 0 28px;
