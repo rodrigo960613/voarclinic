@@ -10,6 +10,7 @@ const links = [
   { id: "sobre", label: "Sobre" },
   { id: "especialidades", label: "Serviços" },
   { id: "como-funciona", label: "Como funciona" },
+  { id: "conteudos", label: "Clínica" },
   { id: "duvidas", label: "Dúvidas" },
   { id: "contato", label: "Contato" }
 ];
@@ -30,7 +31,7 @@ export function Header() {
     };
   }, [open]);
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 960px)");
+    const mq = window.matchMedia("(min-width: 1100px)");
     const onChange = () => mq.matches && setOpen(false);
     mq.addEventListener("change", onChange);
     return () => mq.removeEventListener("change", onChange);

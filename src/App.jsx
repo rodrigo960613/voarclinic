@@ -6,7 +6,6 @@ import { HowItWorks } from "./components/HowItWorks";
 import { InstagramFeed } from "./components/InstagramFeed";
 import { Credibility } from "./components/Credibility";
 import { Help } from "./components/Help";
-import { Why } from "./components/Why";
 import { Quiz } from "./components/Quiz";
 import { Faq } from "./components/Faq";
 import { Contact } from "./components/Contact";
@@ -28,7 +27,6 @@ export default function App() {
         <Credibility />
         <About />
         <Help />
-        <Why />
         <HowItWorks />
         <Quiz />
         <InstagramFeed />

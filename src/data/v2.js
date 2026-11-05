@@ -1,8 +1,3 @@
-export const why = [
-  { n: "01", title: "Olhar científico e individualizado", text: "Cada pessoa tem uma história, e cada avaliação é única." },
-  { n: "02", title: "Apoio às famílias", text: "Orientação e acolhimento em todas as etapas." },
-  { n: "03", title: "Potencializando habilidades", text: "Mais compreensão, estratégias e qualidade de vida." }
-];
 export const quizQuestions = [
   "Você, ou alguém da sua família, tem dificuldade para manter a atenção em tarefas do dia a dia?",
   "Esquecimentos têm atrapalhado a rotina?",

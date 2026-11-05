@@ -22,8 +22,6 @@
 .card a svg {transition:transform .3s var(--ease)}
 .card a:hover svg {transform:translateX(4px)}
 .card--plain {color:var(--ink)}
-.cards--3 {grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
-.why {background:var(--mist)}
 /* Quiz */
 .quiz {background:var(--pearl)}
 .quiz__grid {display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,96px);align-items:center}
@@ -64,8 +62,6 @@
   .help .cards {grid-template-columns:minmax(0,1fr)}
   .help .card:last-child {grid-column:auto}
 }
-.cards--3 {grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:900px) {.cards--3 {grid-template-columns:minmax(0,1fr)}}
 
 /* Foto da doutora junto ao texto de credibilidade */
 .cred__grid {grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
