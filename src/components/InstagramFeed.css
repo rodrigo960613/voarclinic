@@ -1,5 +1,4 @@
 .insta {
-  background: var(--peach);
   color: var(--ink);
 }
 .insta__grid {
@@ -11,7 +10,6 @@
 .insta__video {
   width: min(100%, 300px);
   padding: 10px;
-  border-radius: 40px;
   background: var(--ink);
   box-shadow: 0 40px 70px -36px rgba(14, 33, 69, 0.75);
 }
@@ -19,7 +17,6 @@
   width: 100%;
   height: auto;
   aspect-ratio: 336 / 552;
-  border-radius: 30px;
   background: #000;
   object-fit: cover;
 }
@@ -37,7 +34,6 @@
   align-items: center;
   gap: 14px;
   color: var(--ink);
-  font-size: clamp(0.95rem, 2.1vw, 1.45rem);
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration: none;
