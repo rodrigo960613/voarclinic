@@ -8,7 +8,7 @@ import "./Header.css";
 const links = [
   { id: "especialista", label: "Especialista" },
   { id: "sobre", label: "Sobre" },
-  { id: "especialidades", label: "Atendimento" },
+  { id: "especialidades", label: "Serviços" },
   { id: "como-funciona", label: "Como funciona" },
   { id: "duvidas", label: "Dúvidas" },
   { id: "contato", label: "Contato" }
