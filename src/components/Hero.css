@@ -1,9 +1,6 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: calc(var(--header-h) + clamp(16px, 3vw, 40px)) 0 clamp(32px, 5vw, 56px);
-  /* névoa azulada, como a do adesivo da fachada */
-  background: var(--pearl);
 }
 .hero__grid {
   display: grid;
@@ -22,7 +19,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 36px;
 }
 @media (max-width: 899px) {
   .hero__grid {
@@ -36,5 +32,5 @@
 }
 
 /* Ilustração: cérebro com borboletas */
-.hero__art {display:grid;place-items:center;justify-self:center;width:min(100%,540px)}
+.hero__art {display:grid;place-items:center;justify-self:center}
 .hero__img {display:block;width:100%;height:auto}
