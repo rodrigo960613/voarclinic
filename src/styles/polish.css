@@ -80,7 +80,6 @@ body {
 .cta__box {
   background: var(--ink);
   box-shadow: none;
-  border-radius: var(--r-xl);
 }
 .cta__fly {
   color: rgba(201, 166, 124, 0.14);
