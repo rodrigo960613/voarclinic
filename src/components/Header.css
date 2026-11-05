@@ -18,14 +18,12 @@
   inset: 0 calc(50% - 50vw);
   z-index: -1;
   border-bottom: 1px solid transparent;
-  background: transparent;
-  transition: background-color 0.35s, border-color 0.35s;
+  background: var(--pearl);
+  transition: border-color 0.35s;
 }
 .header--scrolled .header__bar::before {
-  background: rgba(247, 244, 238, 0.92);
+  background: var(--pearl);
   border-color: var(--line);
-  backdrop-filter: blur(14px) saturate(1.2);
-  -webkit-backdrop-filter: blur(14px) saturate(1.2);
 }
 .header__logo {
   position: relative;
